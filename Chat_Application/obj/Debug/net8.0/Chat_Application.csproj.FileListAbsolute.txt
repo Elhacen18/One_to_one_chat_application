@@ -185,3 +185,4 @@ C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\bin\D
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\Chat_Application.sourcelink.json

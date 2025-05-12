@@ -5,7 +5,7 @@ using Chat_Application.Models;
 
 namespace Chat_Application.DTOs
 {
-    
+
     public class AutoMapperProfile : Profile
     {
         public AutoMapperProfile()
