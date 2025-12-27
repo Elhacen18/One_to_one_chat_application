@@ -17,7 +17,7 @@ namespace Chat_Application.Controllers
             // This method will send the message to the user
             // It will return 200 OK if the message is sent
             // It will return 404 Not Found if the user is not found
-            return Ok();
+            return Ok("Sending something ");
         }
 
         // Get messages ?
@@ -27,7 +27,7 @@ namespace Chat_Application.Controllers
             // This method will get the messages from the user
             // It will return 200 OK if the messages are found
             // It will return 404 Not Found if the user is not found
-            return Ok();
+            return Ok("Getting something");
         }
 
         // User chat history()
@@ -37,7 +37,7 @@ namespace Chat_Application.Controllers
             // This method will get the user's chat history
             // It will return 200 OK if the chat history is found
             // It will return 404 Not Found if the user is not found
-            return Ok();
+            return Ok("Getting user history chat");
         }
     }
 }

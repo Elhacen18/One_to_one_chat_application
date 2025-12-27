@@ -35,7 +35,7 @@ namespace Chat_Application.Controllers
                 
             }
             var user = await _context.ApplicationsUsers.FindAsync(userDto.Id);
-            
+            // consider using automapper
             var userProfile = new UserDto
             {   UserName = user.UserName,
                 FirstName = user.FirstName,
@@ -49,14 +49,28 @@ namespace Chat_Application.Controllers
             // It will return 200 OK if the user is found
             // It will return 404 Not Found if the user is not found
         }
-        [HttpPut("Update")]
-        public async Task<IActionResult> UpdateProfile([FromBody] UserDto userDto)
-        {
-            // This method will update the user's profile
-            // It will return 200 OK if the user is found
-            // It will return 404 Not Found if the user is not found
-            return Ok();
-        }
+        //[HttpPut("Update")]
+        //public async Task<IActionResult> UpdateProfile([FromBody] UserDto userDto)
+        //{
+        //    // This method will update the user's profile
+        //    // It will return 200 OK if the user is found
+        //    // It will return 404 Not Found if the user is not found
+        //    if(userDto is null)
+        //    {
+        //        return BadRequest();
+        //    }
+        //    UserDto user =  _context.ApplicationsUsers.FindAsync(userDto.Id);
+        //    // update the user's profile
+        //    user.UserName = userDto.UserName;
+        //    user.FirstName = userDto.FirstName;
+        //    user.LastName = userDto.LastName;
+        //    user.AboutMe = userDto.AboutMe;
+        //    user.Email = userDto.Email;
+        //    // save the changes
+        //    _context.ApplicationsUsers.Update(user);
+
+        //    return Ok();
+        //}
         // Delete user profile
         [HttpDelete("Delete")]
         public async Task<IActionResult> DeleteProfile([FromBody] UserDto userDto)

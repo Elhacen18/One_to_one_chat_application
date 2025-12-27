@@ -1,0 +1,55 @@
+/* Center the card and give it room */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #06b186;
+}
+.full-width {
+  width: 100vw;
+}
+
+mat-form-field {
+  display: block;
+}
+.auth-card {
+  width: 520px;
+  max-width: 95vw;
+  padding: 24px;
+}
+
+/* FORCE vertical stacking */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Each Material field takes full line */
+.full-width {
+  width: 100%;
+}
+
+/* Nice spacing */
+.remember {
+  margin-top: 6px;
+}
+
+.primary-btn {
+  width: 100%;
+  height: 44px;
+  margin-top: 6px;
+}
+
+.auth-footer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.link {
+  font-weight: 700;
+  text-decoration: underline;
+}

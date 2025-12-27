@@ -34,6 +34,7 @@ namespace Chat_Application.Controllers
         }
 
         // register method
+        // WOrking
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
@@ -55,6 +56,7 @@ namespace Chat_Application.Controllers
 
 
         // login method 
+        // Working
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
@@ -91,14 +93,21 @@ namespace Chat_Application.Controllers
             return BadRequest();
         }
         // logout method
+        [HttpPost("logout")]
         [Authorize]
-        [HttpGet("logout")]
-        public IActionResult Logout()
+        public async Task<IActionResult> LogoutAsync()
         {
+            // This  was not working;
+            // The problem was : This method was returning unauthorized (401) even when the user was logged in.
+            // Why: Appsettings.json Jwt has :key, issuer, audience(THIS ONE ONLY); 
+            // Appsettings.json has : "address": instead of  Audience.
+            // This was not matching with the JwtBearer configuration in Program.cs
+            // Fix : // Rename Address → Audience
+            // await userManager.SignOutAsync();
             // This method will log out the user
-            // It will return 200 OK if the user is logged out
-            // It will return 404 Not Found if the user is not found
-            return Ok();
+            // It will return 200 OK
+            return Ok("Logged out successfully");
         }
+        
     }
 }
