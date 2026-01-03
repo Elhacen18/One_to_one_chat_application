@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 // import { RegisterComponent } from './Register/register/register.component';
 // import { LoginComponent } from './login/login/login.component';
 
