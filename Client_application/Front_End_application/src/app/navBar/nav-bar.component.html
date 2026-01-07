@@ -1,11 +1,29 @@
-<mat-toolbar color="primary">
-  <span>
-    <img src="assets/img/angular_whiteTransparent.svg" class="angular-logo">
-    Angular NavBar 
-  </span>
-  <span class="fill-remaining-space"></span>
-  <button mat-button>Menu Option 01</button>
-  <button mat-button>Menu Option 02</button>
-  <button mat-button >Login</button>
-  <button mat-button >Logout</button>
+<mat-toolbar class="topbar">
+
+  <!-- LEFT: Blue Material button -->
+  <button
+    mat-raised-button matButton="outlined" color="primary">
+    Log out
+  </button>
+
+  <!-- Spacer -->
+  <span class="spacer"></span>
+
+  <!-- CENTER -->
+  <div class="center-title">
+    <span class="label">LOGGED IN AS</span>
+    <span class="name">{{ fullName }}</span>
+  </div>
+
+  <!-- Spacer -->
+  <span class="spacer"></span>
+
+  <!-- RIGHT: Clickable initials button -->
+<button
+    mat-raised-button
+    color="primary">
+    {{initials}}
+  </button>
+
 </mat-toolbar>
+

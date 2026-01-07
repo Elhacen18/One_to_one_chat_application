@@ -1,0 +1,35 @@
+.topbar {
+  background: #fff !important;
+  color: #0f172a !important;
+  height: 76px;
+  padding: 0 24px;
+}
+
+/* Spacers keep center truly centered */
+.spacer {
+  flex: 1;
+}
+
+/* Center text */
+.center-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  letter-spacing: .18em;
+}
+
+.label {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+
+
+

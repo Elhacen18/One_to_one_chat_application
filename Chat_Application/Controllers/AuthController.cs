@@ -60,7 +60,8 @@ namespace Chat_Application.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var user = await userManager.FindByNameAsync(loginDto.UserName);
+
+            var user = await userManager.FindByNameAsync(loginDto.userName);
             if (user == null)
             {
                 return NotFound("Invalid user name");

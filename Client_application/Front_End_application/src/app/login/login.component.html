@@ -4,23 +4,23 @@
 
     <mat-card-content>
       <!-- You can wire this later (Reactive Forms) -->
-      <form class="auth-form" autocomplete="off">
+      <form [formGroup]="loginform" class="auth-form" autocomplete="off" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Username</mat-label>
-          <input matInput type="text" placeholder="Username" />
+          <input matInput type="text" placeholder="userName" formControlName="userName" />
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Password</mat-label>
-          <input matInput type="password" placeholder="Password" />
+          <input matInput type="password" placeholder="Password" formControlName="password" />
           <button mat-icon-button matSuffix type="button" aria-label="Toggle password">
           </button>
         </mat-form-field>
 
         <mat-checkbox class="remember">Remember me</mat-checkbox>
 
-        <button mat-raised-button color="primary" class="primary-btn" type="submit">
-          LOGIN
+        <button mat-raised-button color="primary" class="primary-btn" type="submit" >
+          LOGIN 
         </button>
         <div class="auth-footer">
           <span>Need an account?</span>

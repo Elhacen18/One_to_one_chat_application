@@ -9,10 +9,12 @@ import { appConfig } from './app/app.config';
   import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
 // Debugging note: The login and register components were not loading.
 // Why: Appconfig was not included in the bootstrapApplication providers.
 
 bootstrapApplication(AppComponent, {
-  providers: [ appConfig.providers ,provideAnimations()],
+  providers: [ appConfig.providers ,provideAnimations(), provideRouter(routes)],
 });
 
