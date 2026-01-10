@@ -16,4 +16,5 @@ export class NavBarComponent {
 
   fullName = 'Elhacen Boudlal';
   initials = this.fullName.split(' ').map(n => n[0]).join('');
+  
 }

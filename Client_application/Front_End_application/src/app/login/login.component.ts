@@ -39,7 +39,9 @@ export class LoginComponent {
       // console.log(credentials);
       // I was missing controlformname in the html input fields for loginform 
       this.authService.loginUser(credentials).subscribe(response => {
-        console.log('Login successful', response);
+        console.log(response);
+        localStorage.setItem('Token', response.token ); // Save the token to localStorage
+        
         this.router.navigate(['/chat-layout']);
       });
     }

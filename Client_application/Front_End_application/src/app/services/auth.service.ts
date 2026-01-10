@@ -15,11 +15,16 @@ export class AuthService {
   apiUrl = 'https://localhost:7138/api/Auth';
   // apiUrlLogin = 'https://localhost:7138/api/Auth/login';
   registerUser(userData: ApplicationUser) {
-    return this.http.post(`${this.apiUrl}/register`, userData);
+    // added 'any' type to avoid type error: token not found on type object
+    return this.http.post<any>(`${this.apiUrl}/register`, userData);
   }
   loginUser(loginData:Login ) {
-    return this.http.post(`${this.apiUrl}/login`, loginData);
+    // added 'any' type to avoid type error: token not found on type object
+    return this.http.post<any>(`${this.apiUrl}/login`, loginData)
+    ;
+
   }
+  
   
 
 
