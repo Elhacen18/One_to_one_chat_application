@@ -1,1 +1,18 @@
-<p>chat-list works!</p>
+<div class="chat-list">
+  <div class="chat-item" *ngFor="let user of users">
+
+    <div class="chat-info">
+      <div class="top-row">
+        <span class="name">{{ user.firstName }} {{ user.lastName }}</span>
+        <span class="time">{{ user.time }}</span>
+      </div>
+
+      <div class="bottom-row">
+        <span class="message">{{ user.lastMessage }}</span>
+        <!-- <span *ngIf="user.unread" class="badge">
+          {{ user.unread }}
+        </span> -->
+      </div>
+    </div>
+  </div>
+</div>

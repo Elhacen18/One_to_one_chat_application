@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedserviceService } from '../services/sharedservice.service';
   
 @Component({
   selector: 'app-login',
@@ -25,14 +26,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class LoginComponent {
   loginform!:FormGroup // temporary fix 
   
-  constructor(private router: Router, private formBuilder: FormBuilder,private authService: AuthService) { }
-  
+  constructor(private router: Router, private formBuilder: FormBuilder,private authService: AuthService,private sharedService: SharedserviceService) { }
+  currentkLoggedUser:any;
   ngOnInit() {
     this.loginform = this.formBuilder.group({
       userName: [''],
       password: ['']
     });
   }
+
+  // add logic for getting everything associated with logged in user such as chat list
+
   onSubmit() {
     if (this.loginform.valid) {
       const credentials = this.loginform.value;
@@ -41,10 +45,21 @@ export class LoginComponent {
       this.authService.loginUser(credentials).subscribe(response => {
         console.log(response);
         localStorage.setItem('Token', response.token ); // Save the token to localStorage
-        
+        console.log(response.user.firstName);
+        console.log(response.user.lastName);
+        this.sharedService.setcurrentLoggedUser({
+          id: response.user.id,
+          firstName: response.user.firstName,
+          lastName: response.user.lastName
+        });
         this.router.navigate(['/chat-layout']);
       });
     }
+  }
+
+  getchtlist() {
+
+    // Logic to get chat list for the logged in user
   }
 
 

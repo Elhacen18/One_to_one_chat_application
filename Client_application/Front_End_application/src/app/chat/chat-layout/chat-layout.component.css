@@ -1,0 +1,19 @@
+.chat-container {
+  display: flex;
+  height: calc(100vh - 112px); /* Adjust height considering navbar and header */
+}
+.chat-body {
+  display: flex;          /* horizontal layout */
+  height: calc(100vh - 120px); /* adjust based on header height */
+}
+app-chat-list {
+  width: 300px;           /* fixed sidebar */
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+app-chat-window {
+  flex: 1;                /* take remaining space */
+  display: flex;
+  flex-direction: column; /* messages + input */
+}
+

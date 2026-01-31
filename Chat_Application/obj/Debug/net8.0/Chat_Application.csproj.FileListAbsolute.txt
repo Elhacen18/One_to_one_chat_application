@@ -175,11 +175,6 @@ C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\bin\D
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets\msbuild.Chat_Application.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets\msbuild.build.Chat_Application.props
-C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Chat_Application.props
-C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Chat_Application.props
-C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\scopedcss\bundle\Chat_Application.styles.css
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\Chat_App.819B07DC.Up2Date
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\Chat_Application.dll
@@ -187,3 +182,11 @@ C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\D
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\Chat_Application.pdb
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\Chat_Application.genruntimeconfig.cache
 C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\ref\Chat_Application.dll
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\bin\Debug\net8.0\Chat_Application.staticwebassets.endpoints.json
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\elhac\Desktop\Personal Projects\chat-application\Chat_Application\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

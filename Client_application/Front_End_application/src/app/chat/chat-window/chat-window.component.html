@@ -1,1 +1,24 @@
-<app-message></app-message>
+<div class="chat-window">
+  <div class="messages">
+    <app-message
+      *ngFor="let msg of Messages"
+      [message]="msg"
+      [isMine]="msg.id === currentUserId">
+    </app-message>
+  </div>
+
+  <form class="composer" (ngSubmit)="sendMessage()">
+    <mat-form-field class="composer-field" appearance="outline">
+      <input
+        matInput
+        name="text"
+        [(ngModel)]="text"
+        placeholder="Type your message..."
+      />
+    </mat-form-field>
+
+    <button mat-icon-button type="submit" [disabled]="!text?.trim()">
+      <mat-icon>send</mat-icon>
+    </button>
+  </form>
+</div>

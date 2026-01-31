@@ -1,1 +1,28 @@
-<p>conversation-header works!</p>
+<mat-toolbar class="topbar">
+
+  <!-- LEFT: Blue Material button -->
+ <div class="center-title">
+    <span class="label">Messages</span>
+  </div>
+
+  <!-- Spacer -->
+  <span class="spacer"></span>
+
+  <!-- CENTER -->
+  <div class="center-title">
+    <span class="label">Elhacen Boudlal</span>
+    
+  </div>
+
+  <!-- Spacer -->
+  <span class="spacer"></span>
+
+  <!-- RIGHT: Clickable initials button -->
+<button
+    mat-raised-button
+    color="primary">
+    {{initials}}
+  </button>
+
+</mat-toolbar>
+
