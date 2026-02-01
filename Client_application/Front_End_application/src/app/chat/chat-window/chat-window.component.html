@@ -1,13 +1,12 @@
 <div class="chat-window">
   <div class="messages">
     <app-message
-      *ngFor="let msg of Messages"
-      [message]="msg"
-      [isMine]="msg.id === currentUserId">
+      *ngFor="let msg of messages"
+      [message]="msg">
     </app-message>
   </div>
 
-  <form class="composer" (ngSubmit)="sendMessage()">
+  <!-- <form class="composer" (ngSubmit)="sendMessage()">
     <mat-form-field class="composer-field" appearance="outline">
       <input
         matInput
@@ -20,5 +19,5 @@
     <button mat-icon-button type="submit" [disabled]="!text?.trim()">
       <mat-icon>send</mat-icon>
     </button>
-  </form>
+  </form> -->
 </div>

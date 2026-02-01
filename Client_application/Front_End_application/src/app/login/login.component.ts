@@ -59,7 +59,8 @@ export class LoginComponent {
 
   getchtlist() {
 
-    // Logic to get chat list for the logged in user
+    // Logic to get chat list for the logged in user'
+    
   }
 
 

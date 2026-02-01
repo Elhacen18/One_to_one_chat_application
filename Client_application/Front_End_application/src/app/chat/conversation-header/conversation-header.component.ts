@@ -14,6 +14,14 @@ import { SharedserviceService } from '../../services/sharedservice.service';
   styleUrl: './conversation-header.component.css'
 })
 export class ConversationHeaderComponent {
-  fullName = 'Elhacen Boudlal';
+  fullName = '';
   initials = this.fullName.split(' ').map(n => n[0]).join('');
+  constructor(private sharedService: SharedserviceService) { }
+
+  ngOnInit() {
+    this.sharedService.getSelectedUser().subscribe(user => {
+      this.fullName = `${user.firstName} ${user.lastName}`;
+      this.initials = this.fullName.split(' ').map(n => n[0]).join('');
+    });
+  }
 }

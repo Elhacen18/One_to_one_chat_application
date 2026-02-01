@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { SharedserviceService } from '../../services/sharedservice.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-chat-window',
@@ -13,28 +15,37 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './chat-window.component.html',
   styleUrl: './chat-window.component.css'
 })
-export class ChatWindowComponent {
+export class ChatWindowComponent implements OnInit {
+  constructor(private sharedService: SharedserviceService) { }
+  messages:any;
+  selectedUserId: number = 0;
+  selectedUser:any;
   
-  currentUserId = 50;
- text = '';
-
-  Messages = [
-    { messag: 'Hello! How can I help you today?', id: 10 },
-    { messag: 'What are your operating hours?', id: 50 },
-    { messag: 'Do you offer international shipping?', id: 17 },
-    { messag: 'What are your operating hours?', id: 12 },
-    { messag: 'What are your operating hours?', id: 13 },
-    { messag: 'What are your operating hours?', id: 14 },
-    { messag: 'What are your operating hours?', id: 15 },
-    { messag: 'What are your operating hours?', id: 16 }
-  ];
-   sendMessage() {
-    const v = this.text.trim();
-    if (!v) return;
-
-    this.Messages.push({ messag: v, id: this.currentUserId });
-    this.text = '';
+  ngOnInit(): void {
+    const selectedUser = this.sharedService.getSelectedUser().subscribe(user => {
+      console.log('Selected user in ChatWindowComponent subscription:', user);
+      this.selectedUser = user;
+      this.messages = user.Messages;
+      // this.selectedUserId = user.id;
+      console.log('Messages:', this.messages);
+      // pass this infor to message component
+      
+    });
+    // if (selectedUser) {
+    //   console.log('Selected user in ChatWindowComponent:', selectedUser);
+    //   console.log('Messages:', selectedUser.Messages);
+    //   this.messages = selectedUser.Messages;
+    // }
   }
+//   currentUserId = 50;
+//  text = '';
+//    sendMessage() {
+//     const v = this.text.trim();
+//     if (!v) return;
+
+//     this.Messages.push({ messag: v, id: this.currentUserId });
+//     this.text = '';
+//   }
 
 
 }

@@ -1,5 +1,5 @@
 <div class="chat-list">
-  <div class="chat-item" *ngFor="let user of users">
+  <div class="chat-item" *ngFor="let user of users" (click)="selectUser(user)">
 
     <div class="chat-info">
       <div class="top-row">
@@ -8,7 +8,7 @@
       </div>
 
       <div class="bottom-row">
-        <span class="message">{{ user.lastMessage }}</span>
+        <span class="message">{{ user.Messages[user.Messages.length - 1] }}</span>
         <!-- <span *ngIf="user.unread" class="badge">
           {{ user.unread }}
         </span> -->

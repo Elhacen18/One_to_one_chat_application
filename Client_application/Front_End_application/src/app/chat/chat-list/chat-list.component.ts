@@ -24,6 +24,10 @@ export class ChatListComponent implements OnInit {
     });
   }
   
+  selectUser(user: any) {
+    console.log('Selected user:', user);
+    this.sharedService.setSelectedUser(user);
+  }
   
 //   users = [
 //     {

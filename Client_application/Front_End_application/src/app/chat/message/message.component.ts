@@ -14,30 +14,5 @@ import { Input } from '@angular/core';
   styleUrl: './message.component.css'
 })
 export class MessageComponent {
-  @Input() message!: { messag: string; id: number };
-  @Input() isMine = false;
-// Messages  = [{messag:'Hello! How can I help you today?',
-//   id:10
-// }, 
-
-// {messag:'What are your operating hours?',
-//   id:12
-// },
-// {messag:'What are your operating hours?',
-//   id:13
-// },
-// {messag:'What are your operating hours?',
-//   id:14
-// },
-// {messag:'What are your operating hours?',
-//   id:15
-// },
-// {messag:'What are your operating hours?',
-//   id:16
-// },
-
-// {messag:'Do you offer international shipping?',
-//   id:17
-// }];
-
+  @Input() message!: any;
 }

@@ -21,6 +21,7 @@ export class AuthService {
   loginUser(loginData:Login ) {
     // added 'any' type to avoid type error: token not found on type object
     return this.http.post<any>(`${this.apiUrl}/login`, loginData)
+    
     ;
 
   }
